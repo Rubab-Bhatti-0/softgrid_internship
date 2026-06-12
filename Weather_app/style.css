@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+}
+
+#search_section {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    width: 380px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#search_section h1 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.search {
+    display: flex;
+    gap: 10px;
+}
+
+.search input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search input:focus {
+    border-color: #019267;
+}
+
+.search button {
+    padding: 10px 18px;
+    background: #019267;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.search button:hover {
+    background: #017a55;
+}
+
+#error_msg {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+#weather_info {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 25px 30px 10px;
+    width: 380px;
+    text-align: center;
+    margin-top: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#weather_info h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#weather_icon {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin: 10px 0;
+}
+
+#temperature {
+    font-size: 58px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1;
+}
+
+#weather_description {
+    font-size: 18px;
+    color: #555;
+    text-transform: capitalize;
+    margin-top: 8px;
+    padding-bottom: 15px;
+}
+
+#detail_col {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 20px 30px;
+    width: 380px;
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.col {
+    text-align: center;
+}
+
+.col p:first-child {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.col p:last-child {
+    font-size: 13px;
+    color: #777;
+    margin-top: 4px;
+}
+
+@media (max-width: 500px) {
+    #search_section,
+    #weather_info,
+    #detail_col {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #temperature {
+        font-size: 45px;
+    }
+}
